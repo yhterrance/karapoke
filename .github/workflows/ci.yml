@@ -30,5 +30,20 @@ jobs:
       - name: Build frontend
         run: pnpm build
 
+      - name: Install Tauri Linux system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libsoup-3.0-dev \
+            libxdo-dev \
+            libssl-dev \
+            libayatana-appindicator3-dev \
+            libfuse2 \
+            librsvg2-dev \
+            patchelf \
+            build-essential \
+            file
+
       - name: Check Tauri crate
         run: cargo check --manifest-path src-tauri/Cargo.toml
