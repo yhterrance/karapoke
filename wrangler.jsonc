@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "karapoke-site",
+  "name": "karapoke",
   "compatibility_date": "2026-05-28",
   "assets": {
     "directory": "./dist-site",
