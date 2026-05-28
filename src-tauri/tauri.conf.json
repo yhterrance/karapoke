@@ -1,0 +1,41 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Karapoke",
+  "version": "0.1.0",
+  "identifier": "app.karapoke.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5203",
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Karapoke",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 420,
+        "minHeight": 360,
+        "resizable": true,
+        "fullscreen": false,
+        "titleBarStyle": "Overlay",
+        "trafficLightPosition": {
+          "x": 18,
+          "y": 24
+        },
+        "hiddenTitle": true,
+        "backgroundColor": "#F6F1E8"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "createUpdaterArtifacts": false
+  }
+}
