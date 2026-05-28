@@ -10,10 +10,16 @@ pnpm dev
 pnpm tauri dev
 ```
 
-## GitHub Pages
+## Site
 
 The temporary public page for `karapoke.app` lives in `site/`.
 
 ```sh
 pnpm site:build
+```
+
+Deploy the static site with Wrangler:
+
+```sh
+npx wrangler deploy
 ```

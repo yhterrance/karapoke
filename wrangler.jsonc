@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "karapoke-site",
+  "compatibility_date": "2026-05-28",
+  "assets": {
+    "directory": "./dist-site",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "build": {
+    "command": "pnpm site:build",
+    "watch_dir": ["site", "scripts/build-site.mjs"]
+  }
+}
